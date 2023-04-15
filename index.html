@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Final Project CSS</title>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body class="page-wrapper">
+
+
+   <header class="header">
+     
+    <div class="logo-wrapper">
+
+      <a href="#" class="logo">MG</a>
+    </div>
+
+  
+      <input class="side-menu" type="checkbox" id="side-menu" />
+      <label class="hamb" for="side-menu"
+        ><span class="hamb-line"></span
+      ></label>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#proficiency">Proficiency</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header> 
+
+
+
+    <main>
+      
+      <section class="profile" id="profile">
+        <div class="container">
+
+          <h1>Mauro's awesome portfolio</h1>
+          <img src="images/mauro.jpg" alt="Profile Image" />
+  
+          <h2>Who am I ?</h2>
+          <p>
+            My name is Mauro Galluggo, as of right now, I am just a student at
+            Georgian College. But I can assure you that I am very passionate
+            about becoming a great developer and designer.
+          </p>
+        </div>
+      </section>
+
+      <section class="proficiency" id="proficiency">
+        <div class="container">
+          <h2>My Proficiency</h2>
+          <p>I am primarily focused on coding HTML, CSS, and JAVA.</p>
+          <p>
+            But I can assure you that those are just the first of many more code
+            languages that will master.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="container">
+
+          <h2 id="projects">My College Projects</h2>
+  
+          <div class=" grid">
+
+            <div class="project-card" id="project1">
+              <div class="card-image">
+                <img src="images/assignment1.jpg" alt="image not found" />
+              </div>
+              
+    
+              <h3>Assignment 1</h3>
+              <p>
+                I have redesigned the CSS Zen Garden website, applying what I have
+                learned in class to the best of my abilities
+              </p>
+              <button>
+                <a
+                  href="https://maurogalluggo.github.io/Assignment1-Pages/"
+                  target="_blank"
+                  >Select</a
+                >
+              </button>
+            </div>
+    
+            <div class="project-card" id="project2">
+              <div class="card-image">
+                <img src="images/assignment2.webp" alt="image not found" />
+              </div>
+             
+    
+              <h3>Assignment 2</h3>
+              <p>
+                I created a simple webpage that can take you to famous spotify
+                playlists. Choose one to your liking.
+              </p>
+              <button>
+                <a
+                  href="https://maurogalluggo.github.io/CSS-Assignment2-Pages/"
+                  target="_blank"
+                  >Select</a
+                >
+              </button>
+            </div>
+    
+            <div class="project-card" id="project3">
+              <div class="card-image">
+
+                <img src="images/lab5.jpg" alt="image not found" />
+              </div>
+    
+              <h3>Community College</h3>
+              <p>
+                On Lab5, I recreated the St Huxley's Community College. I have also
+                applied local and external fonts.
+              </p>
+              <button>
+                <a
+                  href="https://maurogalluggo.github.io/css-lab-5-pages/"
+                  target="_blank"
+                  >Select</a
+                >
+              </button>
+            </div>
+    
+            <div class="project-card" id="project4">
+              <div class="card-image">
+
+                <img src="images/calopsita.png" alt="image not found" />
+              </div>
+    
+              <h3>Executive Bird</h3>
+              <p>
+                One of my first Labs where I demonstrate how to use image effects,
+                unfortunately I failed to exalt the might of the Executive Bird at
+                its fullest. May the gods forgive me.
+              </p>
+              <button>
+                <a href="https://maurogalluggo.github.io/css-lab4/" target="_blank"
+                  >Select</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="contact-form" id="contact">
+      <div class="container">
+
+        <div class="contact">
+          <h2>Contact Me</h2>
+          <p>
+            I would be more than happy to meet up with you to have a talk, dont
+            need to be shy and feel free to contact me.
+          </p>
+          <p>
+            I am up for anything be it a virtual conversation or meeting in
+            person for a coffee with you.
+          </p>
+          
+          <div class="flex">
+
+            <a href="https://www.linkedin.com/in/maurogalluggo/" class="linkedin"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/MauroGalluggo" class="github">GitHub</a>
+          </div>
+          
+        </div>
+    
+        <div class="form">
+          <form>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" />
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+    
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Designed and developed by Mauro Galluggo</p>
+        <p>This is my CSS Final Project</p>
+      </div>
+    </footer>
+  </body>
+</html>

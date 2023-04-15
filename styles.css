@@ -1,0 +1,519 @@
+/* Custom Fonts */
+
+/* Local font for headings */
+@font-face {
+  font-family: "collegeregular";
+  src: url("assets/COLLEGE-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* External font for body text */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* Simple reset */
+/* /* First example of selector: Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Universal styles for page */
+/* Second example of selector: Class Selector */
+.page-wrapper {
+  display: grid;
+  width: 100%;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+
+.flex {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Resource that I used to find out about the functionality below */
+/* https://blog.logrocket.com/hide-scrollbar-without-impacting-scrolling-css/ */
+/* This also serves as an example of a pseudo selector 3rd one */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* TYPOGRAPHY */
+
+/* Third example of selector: Element Selector */
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+  word-spacing: 4px;
+}
+h1,
+h2,
+h3{
+  font-family: "collegeregular";
+}
+h1 {
+  font-size: 5em;
+  line-height: 1em;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 64px;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin-block: 24px;
+}
+
+p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* HEADER OF PAGE */
+
+/* 
+  This header was based on the feedback received from assignment 2 
+  https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/
+
+  Even following the step by step resource provided on assignment2 I still had a lot of issues
+  to make this work. Most of the solutions involve javascript, so I am really hoping that when I
+  progress through the course, I will be able to do a menu like this with the trouble.
+
+*/
+
+.header {
+  background-color: #ffd93d;
+  color: #fff;
+  box-shadow: 1px 1px 5px 0px var(--gray);
+}
+
+
+/* Used my initials as logo */
+.logo-wrapper {
+  float: right;
+  padding-right: 5%;
+}
+.logo {
+  font-family: "collegeregular";
+  display: flex;
+  color: #2b3467;
+  float: right;
+  margin-top: 25px;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+/* Nav menu */
+.nav {
+  width: 100vw;
+  height: auto;
+  background-color: #ffd93d;
+  color: #000;
+  font-weight: bold;
+  overflow: hidden;
+
+}
+.menu a {
+  display: block;
+  padding: 30px;
+  color: #000;
+  text-decoration: none;
+}
+.menu a:hover {
+  background-color: #2b3467;
+  color: #fff;
+}
+.nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+
+/* Menu Icon */
+.hamb {
+  cursor: pointer;
+  float: left;
+  padding: 40px 20px;
+}
+/* Style label tag */
+
+.hamb-line {
+  background: #000;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+}
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px;
+}
+.hamb-line::after {
+  top: -5px;
+}
+
+/* this is to hide the check box */
+/* Fourth and final example of selector required: ID Selector */
+#side-menu {
+  display: none;
+}
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav {
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* MY PROFILE ABOVE ALBUMS COVERS */
+.profile {
+  background-color: #2b3467;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-block: 64px;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-block: 32px 64px;
+}
+
+/* PROFICIENCY */
+.proficiency {
+  display: flex;
+  background-color: #ffd93d;
+  color: #000;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-block: 64px;
+}
+
+
+
+/* MY PROJECTS */
+.projects {
+  background-color: #2b3467;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: 64px;
+}
+
+/* FLEX TO STYLE ALBUM CARDS */
+.project-card {
+  background-color: #2b3467;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  border-radius: 32px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #ffd93d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  margin: auto;
+  width: 40vw;
+  border-radius: 56px;
+}
+
+.project-card p {
+  margin-bottom: 20px;
+}
+
+/* In order to show that the buttons are links I changed the cursor to a pointer */
+.project-card button {
+  background-color: #ffd93d;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-card button a {
+  text-decoration: none;
+  color: #000;
+}
+
+.project-card button a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+/* CONTACT ME */
+/* 
+    I took inspiration on the source below for my form
+    https://www.youtube.com/watch?v=8yrTnjo0TWw
+*/
+.contact-form {
+  background-color: #ffd93d;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  padding-block: 64px;
+}
+
+
+.contact a,
+.contact a:focus,
+.contact a:active,
+.contact a:visited {
+  text-decoration: none;
+  background-color: #2b3467;
+  color: #fff;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.contact a:hover {
+  background-color: #525c96;
+}
+
+
+.form {
+  padding: 32px;
+  background-color: #ffd93d;
+  border-radius: 32px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #2b3467;
+  margin-top: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  font-size: 16px;
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"] {
+  background-color: #2b3467;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #525c96;
+}
+
+/* FOOTER OF PAGE */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #2b3467;
+  color: #fff;
+  padding: 20px;
+  height: 8vh;
+  padding-block: 64px;
+}
+
+.footer p {
+  margin: 0;
+  line-height: 2.5rem;
+}
+
+/********************************
+/* DESKTOP VIEW */
+@media screen and (min-width: 992px) {
+  /* TYPOGRAPHY DESKTOP */
+  body {
+    font-size: 20px;
+  }
+
+  /* HEADER DESKTOP */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5%;
+  }
+
+  .logo, .logo-wrapper {
+    float: left;
+  }
+
+  /* I hid the mobile menu in the desktop view */
+  .side-menu {
+    display: none;
+  }
+
+  .hamb {
+    display: none;
+  }
+
+  .nav {
+    width: auto;
+    height: 100px;
+    max-height: unset;
+  } 
+  
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+  }
+
+  /* PROJECT DESKTOP */
+
+  /* I applied the feedback you gave on class and managed to fix almost every problem I had.
+    I basically added more divs and two new classes .grid and .flex. I them applied those classes to the divs as I required them */
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  /* FLEX TO STYLE ALBUM CARDS */
+  .project-card {
+    padding: 32px 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-image {
+    width: 150px;
+    height: 150px;
+  }
+  .card-image > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .project-card p {
+    min-height: 220px;
+  }
+
+
+  /* CONTACT ME DESKTOP */
+  .contact-form > div {
+    display: flex;
+    flex-direction: row;
+    padding: 32px;
+    justify-content: space-between;
+    gap: 200px;
+  }
+
+  .form {
+    align-items: center;
+    max-height: fit-content;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 30vw;
+  }
+
+  .contact h2 {
+    text-align: center;
+  }
+
+  .contact p {
+    padding-bottom: 10px;
+    line-height: 3em;
+  }
+
+
+  /* FOOTER DESKTOP */
+  footer {
+    height: 2vh;
+  }
+
+  footer > div {
+    justify-content: center;
+    display: flex;
+    gap: 100px;
+  }
+}
